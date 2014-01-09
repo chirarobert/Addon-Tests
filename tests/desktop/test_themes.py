@@ -34,10 +34,7 @@ class TestThemes:
     @pytest.mark.native
     @pytest.mark.nondestructive
     def test_page_title_for_themes_landing_page(self, mozwebqa):
-        """
-        Test for Litmus 15391.
-        https://litmus.mozilla.org/show_test.cgi?id=15391
-        """
+
         home_page = Home(mozwebqa)
         themes_page = home_page.header.site_navigation_menu("Themes").click()
         Assert.true(themes_page.is_the_current_page)
